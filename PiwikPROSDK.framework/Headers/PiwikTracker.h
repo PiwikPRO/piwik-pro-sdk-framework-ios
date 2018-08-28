@@ -195,7 +195,7 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
 @property (nonatomic, assign) BOOL sessionStart;
 
 /**
- A new session will be generated if the application spent longer time in the background then the session timeout value. Default value 120 seconds.
+ A new session will be generated if the application spent longer time in the background then the session timeout value. Default value 1800 seconds.
 
  The Piwik server will also create a new session if the event is recorded 30 minutes after the previous received event.
  */
