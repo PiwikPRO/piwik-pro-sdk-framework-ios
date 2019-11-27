@@ -121,6 +121,11 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
 @property (nullable, nonatomic, strong) NSString *userID;
 
 /**
+ Internal visitor identifier used when userID is not set. It's automatically generated, random string stored across app restarts. If the app is uninstalled/installed again or the user change device, a new visitor id will be generated and events tracked as a new unique user.
+ */
+@property (nonnull, nonatomic, readonly) NSString *visitorID;
+
+/**
  The device ID is used to track the IDFA (identifier for advertising). IDFA is an additional non empty unique string identifying the device. If you want to use IDFA for tracking then you should set this property to IDFA by yourself (by default it is nil). You can read IDFA from the device as below:
  
  #import <AdSupport/ASIdentifierManager.h>
