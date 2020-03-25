@@ -31,8 +31,8 @@ extern NSString *const PiwikSessionStartNotification;
 
 typedef NS_ENUM(NSUInteger, CustomDimensionScope)
 {
-    CustomDimensionScopeVisit NS_SWIFT_NAME(visit),
-    CustomDimensionScopeAction NS_SWIFT_NAME(action),
+    CustomDimensionScopeVisit NS_SWIFT_NAME(visit) __deprecated,
+    CustomDimensionScopeAction NS_SWIFT_NAME(action) __deprecated,
 };
 
 typedef NS_ENUM(NSUInteger, CustomVariableScope)
@@ -41,9 +41,7 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
     CustomVariableScopeAction NS_SWIFT_NAME(action),
 };
 
-/**
- @name Creating a Piwik tracker
- */
+//MARK: - Tracker instance
 
 /**
  Create and configure a shared Piwik tracker.
@@ -91,9 +89,7 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
  */
 @property (nullable, strong, nonatomic, readonly) id dispatcher;
 
-/**
- @name Tracker configuration
- */
+//MARK: - Tracker configuration
 
 /**
  The user email address used for identifying the user in the app e.g. after the user signed in.
@@ -148,6 +144,15 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
  Default value is YES which would be the preferred option for most developers. Set to NO to avoid prefixing or implement a custom prefixing schema.
  */
 @property (nonatomic, assign) BOOL isPrefixingEnabled;
+
+/**
+ Anonymization is a feature that allows tracking user's activity for aggregated data analysis even if the user doesn't consent on tracking the data. Key features of anonymization:
+ - The user can't be identified as the same person across multiple sessions if he didn't consent on tracking,
+ - Personal data cannot be tracked during the session (i.e. user ID, device ID, email)
+ 
+ Default value is YES.
+ */
+@property (nonatomic, assign) BOOL isAnonymizationEnabled;
 
 /**
  Run the tracker in debug mode.
@@ -206,9 +211,7 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
  */
 @property (nonatomic, assign) NSTimeInterval sessionTimeout;
 
-/**
- @name Track screen views, events, goals and more
- */
+//MARK: - Track screen views, events, goals and more
 
 /**
  Track a single screen view.
@@ -415,11 +418,19 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
  @param value Custom dimension value.
  @param scope Using visit scope will associate the custom dimension with the current session. Action scope will limit the custom dimension to a single action.
  */
-- (BOOL)setCustomDimensionForIndex:(NSUInteger)index value:(NSString *)value scope:(CustomDimensionScope)scope NS_SWIFT_NAME(setCustomDimension(index:value:scope:));
+- (BOOL)setCustomDimensionForIndex:(NSUInteger)index value:(NSString *)value scope:(CustomDimensionScope)scope NS_SWIFT_NAME(setCustomDimension(index:value:scope:)) __deprecated_msg("Use setCustomDimensionForID:value: instead.");
 
 /**
- @name Custom variables
+ Assign a custom dimension.
+
+ A custom dimension is a id-value pair that you can assign to your visits or individual actions.
+
+ @param identifier Custom dimension identifier.
+ @param value Custom dimension value.
  */
+- (BOOL)setCustomDimensionForID:(NSUInteger)identifier value:(NSString *)value NS_SWIFT_NAME(setCustomDimension(identifier:value:));
+
+//MARK: - Custom variables
 
 /**
  Assign a custom variable.
@@ -439,9 +450,7 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
  */
 - (BOOL)setCustomVariableForIndex:(NSUInteger)index name:(NSString *)name value:(NSString *)value scope:(CustomVariableScope)scope NS_SWIFT_NAME(setCustomVariable(index:name:value:scope:));
 
-/**
- @name Dispatch pending events
- */
+//MARK: - Dispatch pending events
 
 /**
  The tracker will automatically dispatch all pending events on a timer. Default value 30 seconds.
