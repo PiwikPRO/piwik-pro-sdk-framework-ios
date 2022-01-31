@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param successBlock Run the block if the dispatch to the Piwik server is successful.
  @param failureBlock Run this block if the dispatch to the Piwik server fails. Provide a YES to indicate if the SDK should attempt to send any pending event or NO if pending events should be saved until next dispatch. E.g. there is no use trying to send pending events if there is no network connection.
  */
-- (void)sendSingleEventWithParameters:(NSDictionary *)parameters success:(void (^)(void))successBlock failure:(void (^)(BOOL shouldContinue))failureBlock;
+- (void)sendSingleEventWithParameters:(NSMutableArray *)parameters success:(void (^)(void))successBlock failure:(void (^)(BOOL shouldContinue))failureBlock;
 
 /**
  Send a a bulk of tracking events to the Piwik server.
@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param successBlock Run the block if the dispatch to the Piwik server is successful.
  @param failureBlock Run this block if the dispatch to the Piwik server fails. Provide a YES to indicate if the SDK should attempt to send any pending event or NO if pending events should be saved until next dispatch. E.g. there is no use trying to send pending events if there is no network connection.
  */
-- (void)sendBulkEventWithParameters:(NSDictionary *)parameters success:(void (^)(void))successBlock failure:(void (^)(BOOL shouldContinue))failureBlock;
+- (void)sendBulkEventWithParameters:(NSMutableArray *)parameters success:(void (^)(void))successBlock failure:(void (^)(BOOL shouldContinue))failureBlock;
 
 /**
  Send a a bulk of data manager events to the Piwik server.

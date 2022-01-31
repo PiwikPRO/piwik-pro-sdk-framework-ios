@@ -155,11 +155,23 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
 @property (nonatomic, assign) BOOL isAnonymizationEnabled;
 
 /**
- Run the tracker in debug mode.
+ Traffic source name.
+ Default value is "ios".
+ */
+@property (nonatomic, assign) NSString *sourceTrafficName;
+
+/**
+ Traffic source version number.
+ Default value is Piwik PRO SDK for iOS version number.
+ */
+@property (nonatomic, assign) NSString *sourceTrafficVesion;
+
+/**
+ Run the tracker in dry run mode.
 
  Instead of sending events to the Piwik server, events will be printed to the console. Useful during development.
  */
-@property (nonatomic, assign) BOOL debug;
+@property (nonatomic, assign) BOOL dryRun;
 
 /**
  Opt out of tracking.
@@ -196,13 +208,6 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
  The application version will be sent as a custom variable (index 3). By default the application version stored in CFBundleShortVersionString and CFBundleVersion will be used.
  */
 @property (nullable, nonatomic, strong) NSString *appVersion;
-
-/**
- Set this value to YES to force a new session start when the next event is sent to the Piwik server.
-
- By default a new session is started each time the application in launched.
- */
-@property (nonatomic, assign) BOOL sessionStart;
 
 /**
  A new session will be generated if the application spent longer time in the background then the session timeout value. Default value 1800 seconds.
@@ -449,6 +454,25 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
  @see includeDefaultCustomVariable
  */
 - (BOOL)setCustomVariableForIndex:(NSUInteger)index name:(NSString *)name value:(NSString *)value scope:(CustomVariableScope)scope NS_SWIFT_NAME(setCustomVariable(index:name:value:scope:));
+
+/**
+The unique visitor ID, must be a 16 characters hexadecimal string.
+
+Every unique visitor must be assigned a different ID and this ID must not change after it is assigned.
+ 
+If this value is not set Piwik will still track visits, but the unique visitors metric might be less accurate.
+
+ @param newVisitorID New Visitor id used for data manager event
+ @return YES if the new Visitor ID is created in a valid format and set as a new Visitor ID, or NO if the Visitor ID format is invalid.
+ */
+- (BOOL)setVisitorID:(NSString *) newVisitorID NS_SWIFT_NAME(setVisitorID(newVisitorID:));
+
+/**
+ Use this method to force a new session start when the next event is sent to the Piwik server.
+
+ By default a new session is started each time the application in launched.
+ */
+- (void)startNewSession NS_SWIFT_NAME(startNewSession());
 
 //MARK: - Dispatch pending events
 
