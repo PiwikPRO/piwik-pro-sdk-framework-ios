@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.name         = "PiwikPROSDK"
-  s.version      = "1.0.7"
+  s.version      = "1.1.0"
   s.summary      = "Piwik PRO SDK for iOS"
 
   s.description  = "SDK for iOS to measure your apps with Piwik PRO"
@@ -34,21 +34,19 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files = "PiwikPROSDK.framework/Headers/*.h"
+  s.source_files = "PiwikPROSDK.xcframework/**/*.{h,m}"
   
-  s.public_header_files = "PiwikPROSDK.framework/Headers/*.h"
+  s.public_header_files = "PiwikPROSDK.xcframework/**/*.h"
 
 
-  s.preserve_paths =  "PiwikPROSDK.framework", "PiwikPROSDK.framework/**/*"
+  s.preserve_paths =  "PiwikPROSDK.xcframework/**/*"
  
   
   s.documentation_url 	= "http://developers.piwik.pro/en/latest/sdk/Piwik_PRO_SDK_for_iOS.html"
-1
-  s.module_map = "PiwikPROSDK.framework/Modules/module.modulemap"
   
   s.frameworks   = "SystemConfiguration"
 
-  s.ios.vendored_frameworks = "PiwikPROSDK.framework"
+  s.ios.vendored_frameworks = "PiwikPROSDK.xcframework"
 
   s.requires_arc = false
 
