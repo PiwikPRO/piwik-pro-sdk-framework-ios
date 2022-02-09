@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/PiwikDispatcher.h</key>
 		<data>
-		VohoIpgLrdZB4lNNfvJgFf9P04M=
+		Mivhms4FduWFd+jeyHSHQOftnFs=
 		</data>
 		<key>Headers/PiwikPROSDK.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/PiwikTracker.h</key>
 		<data>
-		c/RUgkS6AwwoH2mTtMcORaWmMw8=
+		gYblFFL7GI46iF4NJrC/Lbjd9rs=
 		</data>
 		<key>Headers/PiwikTransaction.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		MJRfBIXdFa8R4oq4Qv6rSGfF2Fw=
+		JH8cpgGwcYOZBqpZSY3Yrzjr6zg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,11 +47,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VohoIpgLrdZB4lNNfvJgFf9P04M=
+			Mivhms4FduWFd+jeyHSHQOftnFs=
 			</data>
 			<key>hash2</key>
 			<data>
-			JKD1NydFSAT0OFe1vX0rlBXFA2kI9/xJPhuwZ4kCCgg=
+			L71YE8Fifp57SifKfjBif/r6IYNYDHalsjwEX/io2v4=
 			</data>
 		</dict>
 		<key>Headers/PiwikPROSDK.h</key>
@@ -80,11 +80,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			c/RUgkS6AwwoH2mTtMcORaWmMw8=
+			gYblFFL7GI46iF4NJrC/Lbjd9rs=
 			</data>
 			<key>hash2</key>
 			<data>
-			EBw7wn268tQ/6xgHYWTs1NNCwHXY7UB2sFlLeSENLdg=
+			Z+rfPkhtZ+YgTZzWBWmN7nVSXmZmtxF9n3WM7gfjDNI=
 			</data>
 		</dict>
 		<key>Headers/PiwikTransaction.h</key>

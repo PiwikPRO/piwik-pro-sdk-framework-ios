@@ -486,11 +486,6 @@ If this value is not set Piwik will still track visits, but the unique visitors 
 @property (nonatomic, assign) NSTimeInterval dispatchInterval;
 
 /**
- Specifies if gzip compression should be used for communication with server.
- */
-@property (nonatomic, assign) BOOL useGzip;
-
-/**
  Specifies the maximum number of events queued in local storage. Default 500.
 
  If the number of queued events exceed this value events will no longer be queued.

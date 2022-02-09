@@ -80,13 +80,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)setUserAgent:(NSString *)userAgent;
 
-/**
- *  Set to use gzip compression.
- *
- *  @param useGzip YES if gzip should be used.
- */
-- (void)setUseGzip:(BOOL)useGzip;
-
 @end
 
 NS_ASSUME_NONNULL_END
