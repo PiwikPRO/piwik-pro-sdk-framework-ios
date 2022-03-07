@@ -273,12 +273,12 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
  Exception are prefixed with "social" by default unless prefixing scheme is turned off.
 
  @param action The action taken by the user, e.g. like, tweet
- @param target The target of the action, e.g. a comment, picture or video (often an unique id or name)
+ @param target The target of the action, e.g. a comment, picture or video (often an unique id or name) Optional.
  @param network The social network the user is interacting with, e.g. Facebook
  @return YES if the event was queued for dispatching.
  @see isPrefixingEnabled
  */
-- (BOOL)sendSocialInteractionWithAction:(NSString *)action target:(NSString *)target network:(NSString *)network NS_SWIFT_NAME(sendSocialInteraction(action:target:network:));
+- (BOOL)sendSocialInteractionWithAction:(NSString *)action target:(nullable NSString *)target network:(NSString *)network NS_SWIFT_NAME(sendSocialInteraction(action:target:network:));
 
 /**
  Track a goal conversion.
@@ -382,12 +382,13 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
  When used together with content impression the conversion rate can be calculated. Make sure the same name and piece is used to accuratly calculate the conversion rate.
 
  @param name A human readable display name of the content.
+ @param interaction Type of interaction, e.g. click.
  @param piece A more technical name/id of the content, e.g. the image name or ads id. Optional.
  @param target The outgoing target, e.g. an URL. Optional.
  @return YES if the event was queued for dispatching.
  @see sendContentImpressionWithName:piece:target:
  */
-- (BOOL)sendContentInteractionWithName:(NSString *)name piece:(nullable NSString *)piece target:(nullable NSString *)target NS_SWIFT_NAME(sendContentInteraction(name:piece:target:));
+- (BOOL)sendContentInteractionWithName:(NSString *)name interaction:(NSString*)interaction piece:(nullable NSString *)piece target:(nullable NSString *)target NS_SWIFT_NAME(sendContentInteraction(name:interaction:piece:target:));
 
 /**
  Track custom attributes configured in Piwik PRO data manager.

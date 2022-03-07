@@ -1,6 +1,17 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.1.2 - 07.03.2022
+
+### Changed
+- `Target` argument in the social interaction method to optional
+- Custom dimensions are set for one event only, not for all events
+
+### Added
+- Validation of URLs that are sent with events
+- Interaction parameter to `sendContentInteraction` event
+
+
 ## 1.1.1 - 10.02.2022
 
 ### Changed
