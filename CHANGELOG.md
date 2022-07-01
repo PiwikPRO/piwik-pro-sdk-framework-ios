@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.1.4 - 01.05.2022
+
+### Changed
+- Campaign details are not immediately sent out as a separate event but are attached to the first screen event.
+
 ## 1.1.3 - 10.05.2022
 
 ### Changed
