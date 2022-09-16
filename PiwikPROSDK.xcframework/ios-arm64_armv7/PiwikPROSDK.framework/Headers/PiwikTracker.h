@@ -251,9 +251,10 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
  @param action The name of the action, e.g Play, Pause, Download
  @param name Event name, e.g. song name, file name. Optional.
  @param value A numeric value, float or integer. Optional.
+ @param path The path under which this event occurred. Optional.
  @return YES if the event was queued for dispatching.
  */
-- (BOOL)sendEventWithCategory:(NSString *)category action:(NSString *)action name:(nullable NSString *)name value:(nullable NSNumber *)value NS_SWIFT_NAME(sendEvent(category:action:name:value:));
+- (BOOL)sendEventWithCategory:(NSString *)category action:(NSString *)action name:(nullable NSString *)name value:(nullable NSNumber *)value path:(nullable NSString *)path NS_SWIFT_NAME(sendEvent(category:action:name:value:path:));
 
 /**
  Track a caught exception or error.

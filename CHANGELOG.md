@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.1.5 - 16.09.2022
+
+### Added
+- Optional 'path' parameter to custom event method.
+
 ## 1.1.4 - 01.05.2022
 
 ### Changed
