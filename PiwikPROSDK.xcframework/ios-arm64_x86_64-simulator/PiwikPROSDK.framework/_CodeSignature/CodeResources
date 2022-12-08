@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/PiwikTracker.h</key>
 		<data>
-		ZtdrkMD4Dr6kVASbnP6eCQMqSwE=
+		Pc2C1cqlLytADbrJ0pR+axz0ccw=
 		</data>
 		<key>Headers/PiwikTransaction.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lAh3sI4jfvyaNYWZ99fTudYf9Q4=
+		utt3WKv8gedxdH4ABcJiZ7VkECA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -80,11 +80,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZtdrkMD4Dr6kVASbnP6eCQMqSwE=
+			Pc2C1cqlLytADbrJ0pR+axz0ccw=
 			</data>
 			<key>hash2</key>
 			<data>
-			2JOcrjL2U8vqX4r/GMQIxpbTqSafSWjr/oFyL0/WQuY=
+			hrArP04dMLgHZpup1xgQ9uzgv20SLJx5DZk1ZtlDvNM=
 			</data>
 		</dict>
 		<key>Headers/PiwikTransaction.h</key>

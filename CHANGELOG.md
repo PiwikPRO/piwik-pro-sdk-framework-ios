@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.1.6 - 08.12.2022
+
+### Changed
+- Changed data type for `goalID` parameter in `sendGoal` method from `NSUInteger` to `NSString`
+
+### Fixed
+- Fixed the issue with the incorrect order of values for properties in the `PiwikTransactionItem` object in the Tracking ecommerce method when one of the properties(e.g. category) does not have an assigned value.
+
 ## 1.1.5 - 16.09.2022
 
 ### Added

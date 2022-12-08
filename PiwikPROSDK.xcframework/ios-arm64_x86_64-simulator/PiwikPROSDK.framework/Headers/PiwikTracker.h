@@ -288,7 +288,7 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
  @param revenue The monetary value of the conversion. Optional.
  @return YES if the event was queued for dispatching.
  */
-- (BOOL)sendGoalWithID:(NSUInteger)goalID revenue:(nullable NSNumber *)revenue NS_SWIFT_NAME(sendGoal(ID:revenue:));
+- (BOOL)sendGoalWithID:(NSString *)goalID revenue:(nullable NSNumber *)revenue NS_SWIFT_NAME(sendGoal(ID:revenue:));
 
 /**
  Track a search performed in the application. The search could be local or towards a server.
