@@ -1,6 +1,17 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.1.7 - 16.01.2023
+
+### Fixed
+- Fixed a wrong decimal separator issue for languages that use a comma.
+
+### Changed
+- Removed deprecated 'isFatal' argument from the 'sendExceptionWithDescription' method and 'target' from 'sendSocialInteractionWithAction' method.
+
+### Added
+- Introduced support for UTM tags and custom tags in campaign tracking and deep links.
+
 ## 1.1.6 - 08.12.2022
 
 ### Changed
