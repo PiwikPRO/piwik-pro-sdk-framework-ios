@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.1.8 - 04.02.2023
+
+### Fixed
+- Fixed the issue with wrong order of events in the tracker.
+
 ## 1.1.7 - 16.01.2023
 
 ### Fixed
