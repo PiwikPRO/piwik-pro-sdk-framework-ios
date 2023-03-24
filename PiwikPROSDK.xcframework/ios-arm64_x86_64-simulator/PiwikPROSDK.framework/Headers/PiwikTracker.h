@@ -210,9 +210,8 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
 @property (nullable, nonatomic, strong) NSString *appVersion;
 
 /**
- A new session will be generated if the application spent longer time in the background then the session timeout value. Default value 1800 seconds.
-
- The Piwik server will also create a new session if the event is recorded 30 minutes after the previous received event.
+ A new session parameters will be generated if the application spent longer time in the background than the session timeout value. Default value 1800 seconds.
+ The Piwik server will create a new session if the event is recorded 30 minutes after the previous received event.
  */
 @property (nonatomic, assign) NSTimeInterval sessionTimeout;
 
@@ -328,7 +327,7 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
 
  @return YES if the event was queued for dispatching. NO if current app version was already tracked.
  */
-- (BOOL)sendApplicationDownload;
+- (BOOL)sendApplicationDownload NS_SWIFT_NAME(sendApplicationDownload());
 
 /**
  Track a download initiated by the app.
@@ -468,9 +467,18 @@ If this value is not set Piwik will still track visits, but the unique visitors 
 - (BOOL)setVisitorID:(NSString *) newVisitorID NS_SWIFT_NAME(setVisitorID(newVisitorID:));
 
 /**
+ By default, a new session starts 30 minutes after the last recorded event.
  Use this method to force a new session start when the next event is sent to the Piwik server.
 
- By default a new session is started each time the application in launched.
+ @param preserveSessionParameters By default, calling this method clears all data of the current session. Use this parameter to set whether you want to keep the current session data.
+ */
+- (void)startNewSession:(BOOL) preserveSessionParameters NS_SWIFT_NAME(startNewSession(preserveSessionParameters:));
+
+/**
+ By default, a new session starts 30 minutes after the last recorded event.
+ Use this method to force a new session start when the next event is sent to the Piwik server.
+ 
+ Calling this method clears all data of the current session.
  */
 - (void)startNewSession NS_SWIFT_NAME(startNewSession());
 
