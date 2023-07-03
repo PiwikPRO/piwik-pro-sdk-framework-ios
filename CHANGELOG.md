@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.1.10 - 03.07.2023
+
+### Fixed
+- Fixed the issue with decreasing number of returning visitors.
+
 ## 1.1.9 - 24.03.2023
 
 ### Added
