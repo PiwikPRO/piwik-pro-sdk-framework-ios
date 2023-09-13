@@ -16,6 +16,8 @@ FOUNDATION_EXPORT const unsigned char PiwikPROSDKVersionString[];
 #import "PiwikTransactionItem.h"
 #import "PiwikTransactionBuilder.h"
 #import "PiwikTrackedViewController.h"
+#import "Product.h"
+#import "EcommerceProducts.h"
 
 // Third party licenses
 //

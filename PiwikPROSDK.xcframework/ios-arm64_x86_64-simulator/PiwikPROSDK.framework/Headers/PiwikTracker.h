@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class PiwikTransaction;
+@class EcommerceProducts;
 
 /**
  The PiwikTracker is a framework for sending analytics to a Piwik server.
@@ -312,7 +313,59 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
  @see PiwikTransaction
  @see PiwikTransactionItem
  */
-- (BOOL)sendTransaction:(PiwikTransaction *)transaction NS_SWIFT_NAME(sendTransaction(transaction:));
+- (BOOL)sendTransaction:(PiwikTransaction *)transaction NS_SWIFT_NAME(sendTransaction(transaction:)) __deprecated_msg("Use ecommerceOrder:orderId:grandTotal:subTotal:tax:shipping:discount: instead.");
+
+/**
+ Tracks action of viewing product page.
+
+ @param products  List of product representations.
+ @return YES if the event was queued for dispatching.
+ @see Product
+ */
+- (BOOL)ecommerceProductDetailView:(EcommerceProducts *)products NS_SWIFT_NAME(ecommerceProductDetailView(products:));
+
+/**
+ Tracks current state of a cart.
+
+ @param products  List of product representations.
+ @param grandTotal The total value of products in a cart.
+ @return YES if the event was queued for dispatching.
+ @see Product
+ */
+- (BOOL)ecommerceCartUpdate:(EcommerceProducts *)products grandTotal:(NSString *) grandTotal NS_SWIFT_NAME(ecommerceCartUpdate(products:grandTotal:));
+
+/**
+ Tracks action of adding products to a cart.
+
+ @param products  List of product representations.
+ @return YES if the event was queued for dispatching.
+ @see Product
+ */
+- (BOOL)ecommerceAddToCart:(EcommerceProducts *)products NS_SWIFT_NAME(ecommerceAddToCart(products:));
+
+/**
+ Tracks action of removing a product from a cart.
+
+ @param products  List of product representations.
+ @return YES if the event was queued for dispatching.
+ @see Product
+ */
+- (BOOL)ecommerceRemoveFromCart:(EcommerceProducts *)products NS_SWIFT_NAME(ecommerceRemoveFromCart(products:));
+
+/**
+ Tracks conversion (including products and payment details).
+
+ @param products  List of product representations.
+ @param orderId Unique identifier of an order.
+ @param grandTotal The total value of items in a cart.
+ @param subTotal Total value of items in a cart without shipping.
+ @param tax Total tax amount.
+ @param shipping Total shipping cost.
+ @param discount Total discount.
+ @return YES if the event was queued for dispatching.
+ @see Product
+ */
+- (BOOL)ecommerceOrder:(EcommerceProducts *)products orderId:(NSString *) orderId grandTotal:(NSString *) grandTotal subTotal:(nullable NSString *) subTotal tax:(nullable NSString *) tax shipping:(nullable NSString *) shipping discount:(nullable NSString *) discount NS_SWIFT_NAME(ecommerceOrder(products:orderId:grandTotal:subTotal:tax:shipping:discount:));
 
 /**
  Track an outlink to an external website or app.

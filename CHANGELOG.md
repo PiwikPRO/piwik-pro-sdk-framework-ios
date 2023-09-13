@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.2.0 - 13.09.2023
+
+### Added
+- New e-commerce events: `ecommerceProductDetailView`, `ecommerceAddToCart`, `ecommerceRemoveFromCart`, `ecommerceCartUpdate`, `ecommerceOrder`.
+
+### Changed
+- Changed the number of allowed characters for custom dimension value from 256 to 1024.
+
 ## 1.1.10 - 03.07.2023
 
 ### Fixed

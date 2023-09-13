@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.name         = "PiwikPROSDK"
-  s.version      = "1.1.10"
+  s.version      = "1.2.0"
   s.summary      = "Piwik PRO SDK for iOS"
 
   s.description  = "SDK for iOS to measure your apps with Piwik PRO"

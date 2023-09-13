@@ -4,13 +4,17 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/EcommerceProducts.h</key>
+		<data>
+		ygt/HKhOeInxn5Nvfgf9Zrmgt58=
+		</data>
 		<key>Headers/PiwikDispatcher.h</key>
 		<data>
 		Mivhms4FduWFd+jeyHSHQOftnFs=
 		</data>
 		<key>Headers/PiwikPROSDK.h</key>
 		<data>
-		gEhromLkEe3xY4CRHlMtvx/eqq0=
+		PSx4KAjjtFrDkJ2X08gKz9XQ8Q8=
 		</data>
 		<key>Headers/PiwikTrackedViewController.h</key>
 		<data>
@@ -18,7 +22,7 @@
 		</data>
 		<key>Headers/PiwikTracker.h</key>
 		<data>
-		lZqkYH+7cuszoGw+hS+4GPd19q0=
+		COI4i2DeS0dLWEFC6tX5vVhFRGI=
 		</data>
 		<key>Headers/PiwikTransaction.h</key>
 		<data>
@@ -32,9 +36,13 @@
 		<data>
 		sYCqi0UCuyKZpIp2DF1tdtQCeoE=
 		</data>
+		<key>Headers/Product.h</key>
+		<data>
+		WVK02Zp+2xUah0G7FgNQLSnj1fg=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		QQsLlPVI4mqwB3y+xa7YQgCGprI=
+		fIksHItofB+g3z+FuEJIisksSY0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -43,6 +51,17 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/EcommerceProducts.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ygt/HKhOeInxn5Nvfgf9Zrmgt58=
+			</data>
+			<key>hash2</key>
+			<data>
+			qTNwD3SplUrye/yVov1WTdLhL20qjgT0sr2L0hZMOVM=
+			</data>
+		</dict>
 		<key>Headers/PiwikDispatcher.h</key>
 		<dict>
 			<key>hash</key>
@@ -58,11 +77,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gEhromLkEe3xY4CRHlMtvx/eqq0=
+			PSx4KAjjtFrDkJ2X08gKz9XQ8Q8=
 			</data>
 			<key>hash2</key>
 			<data>
-			+3PaihN5gKhtCvHBR6osBX/HduyNd9B07+I6Dm32AYU=
+			cdCGwzP6tJ4YT7+wSe/DUFEIx+yBiB3aHkA2fnFADNE=
 			</data>
 		</dict>
 		<key>Headers/PiwikTrackedViewController.h</key>
@@ -80,11 +99,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lZqkYH+7cuszoGw+hS+4GPd19q0=
+			COI4i2DeS0dLWEFC6tX5vVhFRGI=
 			</data>
 			<key>hash2</key>
 			<data>
-			7pWrjAXVgOlNjumkkHMtrU1fZJpPpAMCO/ndKFCkp4Q=
+			thBEjL+6+FblfTH6d8vYWFKaMgyy1HbD6GcLzKtJyeA=
 			</data>
 		</dict>
 		<key>Headers/PiwikTransaction.h</key>
@@ -118,6 +137,17 @@
 			<key>hash2</key>
 			<data>
 			Uw0QXFVeH4qphHjykROK1ZEUlk6ZnkK9MiihwC/LaCc=
+			</data>
+		</dict>
+		<key>Headers/Product.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WVK02Zp+2xUah0G7FgNQLSnj1fg=
+			</data>
+			<key>hash2</key>
+			<data>
+			UcGWQfxMYm7NNAeIKxhUsQgOLUGEfYv3dCJvEzIsyKU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
