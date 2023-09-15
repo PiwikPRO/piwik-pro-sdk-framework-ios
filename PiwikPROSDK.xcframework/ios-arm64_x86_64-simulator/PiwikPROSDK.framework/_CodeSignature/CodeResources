@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/EcommerceProducts.h</key>
 		<data>
-		ygt/HKhOeInxn5Nvfgf9Zrmgt58=
+		SrT8xeDFbOvlaiqqbHv5w4+bNr4=
 		</data>
 		<key>Headers/PiwikDispatcher.h</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/Product.h</key>
 		<data>
-		WVK02Zp+2xUah0G7FgNQLSnj1fg=
+		1yYZTGc9mmWa5gx4cDBgzramZxE=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -55,11 +55,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ygt/HKhOeInxn5Nvfgf9Zrmgt58=
+			SrT8xeDFbOvlaiqqbHv5w4+bNr4=
 			</data>
 			<key>hash2</key>
 			<data>
-			qTNwD3SplUrye/yVov1WTdLhL20qjgT0sr2L0hZMOVM=
+			bbcXCzD0Ct6daOrvb2bNAPiAdePPF0LveENDqKwBgRs=
 			</data>
 		</dict>
 		<key>Headers/PiwikDispatcher.h</key>
@@ -143,11 +143,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WVK02Zp+2xUah0G7FgNQLSnj1fg=
+			1yYZTGc9mmWa5gx4cDBgzramZxE=
 			</data>
 			<key>hash2</key>
 			<data>
-			UcGWQfxMYm7NNAeIKxhUsQgOLUGEfYv3dCJvEzIsyKU=
+			szkdjpNqx+zI9pUdy79UdeBGnHN27Zgum9MXquKgKg0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

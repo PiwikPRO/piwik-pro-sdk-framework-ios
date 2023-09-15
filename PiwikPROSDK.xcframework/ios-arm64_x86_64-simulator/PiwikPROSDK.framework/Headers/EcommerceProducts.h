@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
  @see addProduct:product:
  @see addProducts:products:
  */
-- (void)addProductWithSku:(NSString *)sku name:(nullable NSString *)name category:(nullable NSArray *)category price:(nullable NSString *)price quantity:(nullable NSNumber *)quantity brand:(nullable NSString *)brand variant:(nullable NSString *)variant customDimensions:(nullable NSDictionary *)customDimensions NS_SWIFT_NAME(addProduct(sku:name:category:price:quantity:brand:variant:customDimensions:));
+- (void)addProductWithSku:(NSString *)sku name:(nullable NSString *)name category:(nullable NSArray<NSString *>*)category price:(nullable NSString *)price quantity:(nullable NSNumber *)quantity brand:(nullable NSString *)brand variant:(nullable NSString *)variant customDimensions:(nullable NSDictionary<NSNumber*, NSString*>*)customDimensions NS_SWIFT_NAME(addProduct(sku:name:category:price:quantity:brand:variant:customDimensions:));
 
 /**
  Add a product to the products list.

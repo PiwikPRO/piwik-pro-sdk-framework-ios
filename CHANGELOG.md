@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.2.1 - 15.09.2023
+
+### Changed
+- Changed the type of parameters `category` and `custom dimensions` in new e-commerce `Product` class.
+
 ## 1.2.0 - 13.09.2023
 
 ### Added

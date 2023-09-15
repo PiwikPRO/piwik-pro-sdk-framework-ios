@@ -51,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Product custom dimensions (default: {}). Optional.
  */
-@property (nullable, nonatomic, strong) NSDictionary *customDimensions;
+@property (nullable, nonatomic, strong) NSDictionary<NSNumber*, NSString*> *customDimensions;
 
 /**
  Create a product that can be added to an ecommerce event.
@@ -66,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param customDimensions Product custom dimensions
  @return An ecommerce product
  */
-+ (instancetype)productWithSku:(NSString *)sku name:(nullable NSString *)name category:(nullable NSArray *)category price:(nullable NSString *)price quantity:(nullable NSNumber *)quantity brand:(nullable NSString *)brand variant:(nullable NSString *)variant customDimensions:(nullable NSDictionary *)customDimensions NS_SWIFT_NAME(productWithSku(sku:name:category:price:quantity:brand:variant:customDimensions:));
++ (instancetype)productWithSku:(NSString *)sku name:(nullable NSString *)name category:(nullable NSArray<NSString *>*)category price:(nullable NSString *)price quantity:(nullable NSNumber *)quantity brand:(nullable NSString *)brand variant:(nullable NSString *)variant customDimensions:(nullable NSDictionary<NSNumber*, NSString*>*)customDimensions NS_SWIFT_NAME(productWithSku(sku:name:category:price:quantity:brand:variant:customDimensions:));
 
 /**
  Create a product that can be added to an ecommerce event. with a minimum set of mandatory parameters.
