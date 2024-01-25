@@ -81,7 +81,7 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
 
  The value can be found in the Piwik server -> Settings -> Websites.
  */
-@property (nullable, strong, nonatomic, readonly) NSString *siteID;
+@property (nullable, strong, nonatomic) NSString *siteID;
 
 /**
  The dispatcher will execute the actual network request to the Piwik server.

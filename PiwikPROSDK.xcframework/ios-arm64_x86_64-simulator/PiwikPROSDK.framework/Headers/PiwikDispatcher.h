@@ -80,6 +80,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)setUserAgent:(NSString *)userAgent;
 
+/**
+ *  Get a custom user agent that dispatcher is using for building requests.
+ */
+- (NSString *)getUserAgent;
+
 @end
 
 NS_ASSUME_NONNULL_END
