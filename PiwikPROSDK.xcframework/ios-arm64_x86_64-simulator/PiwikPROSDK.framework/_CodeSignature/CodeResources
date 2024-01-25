@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/PiwikDispatcher.h</key>
 		<data>
-		Mivhms4FduWFd+jeyHSHQOftnFs=
+		6CphIrByKicpa/wGr5phohHHbwo=
 		</data>
 		<key>Headers/PiwikPROSDK.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/PiwikTracker.h</key>
 		<data>
-		COI4i2DeS0dLWEFC6tX5vVhFRGI=
+		EaCVT+66oKAF+P6/LC+2KdPY0S0=
 		</data>
 		<key>Headers/PiwikTransaction.h</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		fIksHItofB+g3z+FuEJIisksSY0=
+		LfVOQMwRtC95fPVGyHWdJuhzu7E=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		OCIQkeBqinWzzuudfjmaIAMm/bc=
+		lU/JW1hg7fmp9s8soaN917OTVus=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -66,11 +66,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Mivhms4FduWFd+jeyHSHQOftnFs=
+			6CphIrByKicpa/wGr5phohHHbwo=
 			</data>
 			<key>hash2</key>
 			<data>
-			L71YE8Fifp57SifKfjBif/r6IYNYDHalsjwEX/io2v4=
+			L2UICQidUKJpIlOsd8VQhq2OQu7mLuLfPb/edfQFLRs=
 			</data>
 		</dict>
 		<key>Headers/PiwikPROSDK.h</key>
@@ -99,11 +99,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			COI4i2DeS0dLWEFC6tX5vVhFRGI=
+			EaCVT+66oKAF+P6/LC+2KdPY0S0=
 			</data>
 			<key>hash2</key>
 			<data>
-			thBEjL+6+FblfTH6d8vYWFKaMgyy1HbD6GcLzKtJyeA=
+			1ZD39LDpXvYbPbUNf1B+igtzqrFT8A1Xg24rCRoaMCg=
 			</data>
 		</dict>
 		<key>Headers/PiwikTransaction.h</key>
@@ -154,11 +154,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OCIQkeBqinWzzuudfjmaIAMm/bc=
+			lU/JW1hg7fmp9s8soaN917OTVus=
 			</data>
 			<key>hash2</key>
 			<data>
-			hfFPHWT+MhyiUDCMINxW6qGj6nGMzqgHWT04XZyphp8=
+			mUW0OFqpmU4L+ze43sq/Sv+oqB6KhgaG1d8mfwj4zic=
 			</data>
 		</dict>
 	</dict>

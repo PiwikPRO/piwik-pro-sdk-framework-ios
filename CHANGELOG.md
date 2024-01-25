@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.2.2 - 25.01.2024
+
+### Added
+- Implemented the ability to change siteID and URL in an already initialised tracker. All that needs to be done is to call the `sharedInstance(siteID:baseURL:)` method with the appropriate parameters.
+
 ## 1.2.1 - 15.09.2023
 
 ### Changed
