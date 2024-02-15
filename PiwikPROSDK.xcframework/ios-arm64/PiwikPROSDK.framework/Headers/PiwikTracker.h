@@ -380,7 +380,21 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
 
  @return YES if the event was queued for dispatching. NO if current app version was already tracked.
  */
-- (BOOL)sendApplicationDownload NS_SWIFT_NAME(sendApplicationDownload());
+- (BOOL)sendApplicationDownload NS_SWIFT_NAME(sendApplicationDownload()) __deprecated_msg("Use applicationInstall instead.");
+
+/**
+ Track installation of the app. The event can be sent only once for each installation of the application.
+
+ @return YES if the event was queued for dispatching. NO if current app version was already tracked.
+ */
+- (BOOL)applicationInstall NS_SWIFT_NAME(applicationInstall());
+
+/**
+ Track updates of the app. The event can be sent once per app version.
+
+ @return YES if the event was queued for dispatching. NO if current app version was already tracked.
+ */
+- (BOOL)applicationUpdate NS_SWIFT_NAME(applicationUpdate());
 
 /**
  Track a download initiated by the app.

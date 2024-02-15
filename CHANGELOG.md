@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.2.3 - 15.02.2024
+
+### Added
+- New events" `applicationInstall` and `applicationUpdate`.
+
 ## 1.2.2 - 25.01.2024
 
 ### Added
