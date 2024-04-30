@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.name         = "PiwikPROSDK"
-  s.version      = "1.2.3"
+  s.version      = "1.2.4"
   s.summary      = "Piwik PRO SDK for iOS"
 
   s.description  = "SDK for iOS to measure your apps with Piwik PRO"
@@ -46,6 +46,8 @@ Pod::Spec.new do |s|
   s.frameworks   = "SystemConfiguration"
 
   s.ios.vendored_frameworks = "PiwikPROSDK.xcframework"
+
+  s.resource_bundles = {"PiwikPROSDK" => ["PiwikPROSDK-Wrapper/Resources/PrivacyInfo.xcprivacy"]}
 
   s.requires_arc = false
 

@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.2.4 - 30.04.2024
+
+### Added
+- Privacy manifest for XCFramework.
+- Digital signature.
+
+### Fixed
+- Lack of compatibility with Xcode 15.3 resulting in an error when uploading applications to AppStoreConnect or Testflight. Please note that the problem is due to a bug on Apple's side and only a workaround has been implemented.
+
 ## 1.2.3 - 15.02.2024
 
 ### Added
