@@ -3,16 +3,18 @@ import PackageDescription
 
 let package = Package(
     name: "PiwikPROSDK",
-    platforms: [.iOS(.v9)],
     products: [
         .library(
             name: "PiwikPROSDK",
-            targets: ["PiwikPROSDK"]),
-    ],
-    dependencies: [
-        
+            targets: ["PiwikPROSDKWrapper"]),
     ],
     targets: [
+        .target(
+          name: "PiwikPROSDKWrapper",
+          dependencies: ["PiwikPROSDK"],
+          path: "PiwikPROSDK-Wrapper",
+          resources: [.process("Resources/PrivacyInfo.xcprivacy")]
+        ),
         .binaryTarget(name: "PiwikPROSDK", path: "./PiwikPROSDK.xcframework"),
     ]
 )
