@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.2.5 - 10.06.2024
+
+### Added
+- `visitorIDLifetime` property. 
+The variable introduces the possibility of setting the expiry time of the visitorID. If the visitorID expires, a new visitorID will be created automatically. In the tracker, the user whose visitorID expires will appear as a new visitor.
+The mechanism needs the visitorID creation time to work properly. After upgrading to this version of the SDK, the visitorID creation time will be the time of the first SDK initialisation after the upgrade.
+Default value for this variable is 0, which results in this feature being disabled.
+The `visitorIDLifetime` is in seconds.
+
 ## 1.2.4 - 30.04.2024
 
 ### Added
