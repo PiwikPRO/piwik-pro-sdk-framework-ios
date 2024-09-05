@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/PiwikTracker.h</key>
 		<data>
-		qGb0Q1BaQ2aBtjil5Y0ctSH+CeY=
+		0EW1ewGiGgSeLPEEep6zjlVdHc4=
 		</data>
 		<key>Headers/PiwikTransaction.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		i0lKUL0otDQvNxY+bGsjTvGYOJw=
+		Umk0BzsM6OogWXeayISslzfL97A=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -99,11 +99,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qGb0Q1BaQ2aBtjil5Y0ctSH+CeY=
+			0EW1ewGiGgSeLPEEep6zjlVdHc4=
 			</data>
 			<key>hash2</key>
 			<data>
-			ttdiLcemPC8u4etx8UVqOCyZ5V7ykYqatO0uIXsfk9w=
+			R8Q9FFHbnfr16Smf0y2I1zqnv9imPNVjQOxZ533JJxk=
 			</data>
 		</dict>
 		<key>Headers/PiwikTransaction.h</key>
