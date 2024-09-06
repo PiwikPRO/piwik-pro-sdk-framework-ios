@@ -1,6 +1,18 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.0.0 - 05.09.2024
+
+### Added
+Cross-platform tracking features
+
+The release will disable session hash support by default (sh=0 parameter). 
+The main reason is the high likelihood of mobile devices sharing altogether the same User-Agent header (due to visitors using the same mobile app) and the same public IP address due to being connected to the same network (e.g. shopping malls, train stations, airports). The more densely the area is populated, the more it impacts the quality of data collection. Another important reason is that the cookie ID (primary visitor identifier) is much less likely to change when using mobile SDKs compared to the browser environment.
+Documentation with instructions on how to configure the cross-platform feature should appear soon in the Help Center.
+
+- properties `sessionHash` to control the SessionHash feature, `userAgent` for accessing the user agent used in the SDK
+- new methods dedicated to cross-platform tracking `setVisitorIdFromDeepLink`, `setVisitorIdFromURL`
+
 ## 1.2.5 - 10.06.2024
 
 ### Added

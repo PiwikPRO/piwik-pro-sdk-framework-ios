@@ -42,6 +42,13 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
     CustomVariableScopeAction NS_SWIFT_NAME(action),
 };
 
+typedef NS_ENUM(NSUInteger, SessionHash)
+{
+    Disabled NS_SWIFT_NAME(disabled),
+    Enabled NS_SWIFT_NAME(enabled),
+    NotSet NS_SWIFT_NAME(notSet),
+};
+
 //MARK: - Tracker instance
 
 /**
@@ -123,6 +130,11 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
 @property (nonnull, nonatomic, readonly) NSString *visitorID;
 
 /**
+ *  Internal user agent used for data transmission between the Piwik Pro SDK and the Tracker.
+ */
+@property (nonnull, nonatomic, readonly) NSString *userAgent;
+
+/**
  The device ID is used to track the IDFA (identifier for advertising). IDFA is an additional non empty unique string identifying the device. If you want to use IDFA for tracking then you should set this property to IDFA by yourself (by default it is nil). You can read IDFA from the device as below:
  
  #import <AdSupport/ASIdentifierManager.h>
@@ -154,6 +166,22 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
  Default value is YES.
  */
 @property (nonatomic, assign) BOOL isAnonymizationEnabled;
+
+/**
+ * Provides on-demand control of the SessionHash feature.
+ *
+ * - 'sh' parameter will be set to 0 when disabled
+ *
+ * - 'sh' parameter will be set to 1 when enabled
+ * 
+ * - 'sh' parameter will not be set when notSet. Processing service will default to the current value from the Privacy tab in global or app settings.
+ *
+ * Default value is set to disabled.
+ * 
+ * PIWIK PRO SDK will persist the parameter and hold the state next time the SDK is initialised.
+ */
+
+@property (nonatomic, assign) SessionHash sessionHash;
 
 /**
  Traffic source name.
@@ -438,6 +466,24 @@ typedef NS_ENUM(NSUInteger, CustomVariableScope)
  */
 - (BOOL)sendCampaign:(NSString *)campaignURLString NS_SWIFT_NAME(sendCampaign(url:));
 
+/**
+ The method sets the visitorID provided in the deep link as parameter pk_vid.
+
+ @param deepLink A custom app URL containing pk_vid parameter
+ @return YES if the visitor ID is successfully set, NO otherwise or when it is nothing to set
+ */
+- (BOOL) setVisitorIdFromDeepLink: (nullable NSString *)deepLink
+    NS_SWIFT_NAME(setVisitorIdFrom(deepLink:));
+
+/**
+ The method sets the visitorID provided in the deep link as parameter pk_vid.
+
+ @param url A custom app URL containing pk_vid parameter
+ @return YES if the visitor ID is successfully set, NO otherwise or when it is nothing to set
+ */
+
+- (BOOL) setVisitorIdFromURL: (nullable NSURL *)url
+    NS_SWIFT_NAME(setVisitorIdFrom(url:));
 /**
  Track how often a specific ad or banner is displayed in the app.
 
