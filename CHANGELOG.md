@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.1.0 - 21.02.2025
+
+### Added
+
+- Currency conversion for `sendGoalWithID` and all ecommerce methods.
+
 ## 2.0.0 - 05.09.2024
 
 ### Added
