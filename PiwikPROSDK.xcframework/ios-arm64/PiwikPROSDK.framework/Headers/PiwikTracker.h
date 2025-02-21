@@ -321,12 +321,23 @@ typedef NS_ENUM(NSUInteger, SessionHash)
  Track a goal conversion.
 
  @param goalID The unique goal ID as configured in the Piwik server.
- @param revenue The monetary value of the conversion. Optional.
+ @param revenue The monetary value of the conversion.
+ @param currencyCode Currency of the 'conversionValue' in [ISO 4217 format](https://en.wikipedia.org/wiki/ISO_4217). If not provided, the currency set in app settings will be used instead.
+ @return YES if the event was queued for dispatching.
+ */
+- (BOOL)sendGoalWithID:(NSString *)goalID revenue:(nullable NSNumber *)revenue currencyCode:(nullable NSString *)currencyCode NS_SWIFT_NAME(sendGoal(ID:revenue:currencyCode:));
+
+/**
+ Track a goal conversion.
+
+ @param goalID The unique goal ID as configured in the Piwik server.
+ @param revenue The monetary value of the conversion.
  @return YES if the event was queued for dispatching.
  */
 - (BOOL)sendGoalWithID:(NSString *)goalID revenue:(nullable NSNumber *)revenue NS_SWIFT_NAME(sendGoal(ID:revenue:));
 
 /**
+ 
  Track a search performed in the application. The search could be local or towards a server.
 
  Searches will be presented as Site Search requests in the Piwik web interface.
@@ -354,6 +365,18 @@ typedef NS_ENUM(NSUInteger, SessionHash)
 - (BOOL)sendTransaction:(PiwikTransaction *)transaction NS_SWIFT_NAME(sendTransaction(transaction:)) __deprecated_msg("Use ecommerceOrder:orderId:grandTotal:subTotal:tax:shipping:discount: instead.");
 
 /**
+ 
+ Tracks action of viewing product page.
+
+ @param products  List of product representations.
+ @param currencyCode Currency of the 'conversionValue' in ISO 4217 format. If not provided, the currency set in app settings will be used instead.
+ @return YES if the event was queued for dispatching.
+ @see Product
+ */
+- (BOOL)ecommerceProductDetailView:(EcommerceProducts *)products currencyCode:(nullable NSString *)currencyCode NS_SWIFT_NAME(ecommerceProductDetailView(products:currencyCode:));
+
+/**
+ 
  Tracks action of viewing product page.
 
  @param products  List of product representations.
@@ -361,8 +384,19 @@ typedef NS_ENUM(NSUInteger, SessionHash)
  @see Product
  */
 - (BOOL)ecommerceProductDetailView:(EcommerceProducts *)products NS_SWIFT_NAME(ecommerceProductDetailView(products:));
-
 /**
+ 
+ Tracks current state of a cart.
+
+ @param products  List of product representations.
+ @param grandTotal The total value of products in a cart.
+ @param currencyCode Currency of the 'conversionValue' in ISO 4217 format. If not provided, the currency set in app settings will be used instead.
+ @return YES if the event was queued for dispatching.
+ @see Product
+ */
+- (BOOL)ecommerceCartUpdate:(EcommerceProducts *)products grandTotal:(NSString *) grandTotal currencyCode:(nullable NSString *)currencyCode NS_SWIFT_NAME(ecommerceCartUpdate(products:grandTotal:currencyCode:));
+/**
+ 
  Tracks current state of a cart.
 
  @param products  List of product representations.
@@ -371,8 +405,18 @@ typedef NS_ENUM(NSUInteger, SessionHash)
  @see Product
  */
 - (BOOL)ecommerceCartUpdate:(EcommerceProducts *)products grandTotal:(NSString *) grandTotal NS_SWIFT_NAME(ecommerceCartUpdate(products:grandTotal:));
-
 /**
+ 
+ Tracks action of adding products to a cart.
+
+ @param products  List of product representations.
+ @param currencyCode Currency of the 'conversionValue' in ISO 4217 format. If not provided, the currency set in app settings will be used instead.
+ @return YES if the event was queued for dispatching.
+ @see Product
+ */
+- (BOOL)ecommerceAddToCart:(EcommerceProducts *)products currencyCode:(nullable NSString *)currencyCode NS_SWIFT_NAME(ecommerceAddToCart(products:currencyCode:));
+/**
+ 
  Tracks action of adding products to a cart.
 
  @param products  List of product representations.
@@ -380,8 +424,18 @@ typedef NS_ENUM(NSUInteger, SessionHash)
  @see Product
  */
 - (BOOL)ecommerceAddToCart:(EcommerceProducts *)products NS_SWIFT_NAME(ecommerceAddToCart(products:));
-
 /**
+ 
+ Tracks action of removing a product from a cart.
+
+ @param products  List of product representations.
+ @param currencyCode Currency of the 'conversionValue' in ISO 4217 format. If not provided, the currency set in app settings will be used instead.
+ @return YES if the event was queued for dispatching.
+ @see Product
+ */
+- (BOOL)ecommerceRemoveFromCart:(EcommerceProducts *)products currencyCode:(nullable NSString *)currencyCode NS_SWIFT_NAME(ecommerceRemoveFromCart(products:currencyCode:));
+/**
+ 
  Tracks action of removing a product from a cart.
 
  @param products  List of product representations.
@@ -389,8 +443,24 @@ typedef NS_ENUM(NSUInteger, SessionHash)
  @see Product
  */
 - (BOOL)ecommerceRemoveFromCart:(EcommerceProducts *)products NS_SWIFT_NAME(ecommerceRemoveFromCart(products:));
-
 /**
+ 
+ Tracks conversion (including products and payment details).
+
+ @param products  List of product representations.
+ @param orderId Unique identifier of an order.
+ @param grandTotal The total value of items in a cart.
+ @param subTotal Total value of items in a cart without shipping.
+ @param tax Total tax amount.
+ @param shipping Total shipping cost.
+ @param discount Total discount.
+ @param currencyCode Currency of the 'conversionValue' in ISO 4217 format. If not provided, the currency set in app settings will be used instead.
+ @return YES if the event was queued for dispatching.
+ @see Product
+ */
+- (BOOL)ecommerceOrder:(EcommerceProducts *)products orderId:(NSString *) orderId grandTotal:(NSString *) grandTotal subTotal:(nullable NSString *) subTotal tax:(nullable NSString *) tax shipping:(nullable NSString *) shipping discount:(nullable NSString *) discount currencyCode:(nullable NSString *)currencyCode NS_SWIFT_NAME(ecommerceOrder(products:orderId:grandTotal:subTotal:tax:shipping:discount:currencyCode:));
+/**
+ 
  Tracks conversion (including products and payment details).
 
  @param products  List of product representations.
@@ -404,7 +474,6 @@ typedef NS_ENUM(NSUInteger, SessionHash)
  @see Product
  */
 - (BOOL)ecommerceOrder:(EcommerceProducts *)products orderId:(NSString *) orderId grandTotal:(NSString *) grandTotal subTotal:(nullable NSString *) subTotal tax:(nullable NSString *) tax shipping:(nullable NSString *) shipping discount:(nullable NSString *) discount NS_SWIFT_NAME(ecommerceOrder(products:orderId:grandTotal:subTotal:tax:shipping:discount:));
-
 /**
  Track an outlink to an external website or app.
 
