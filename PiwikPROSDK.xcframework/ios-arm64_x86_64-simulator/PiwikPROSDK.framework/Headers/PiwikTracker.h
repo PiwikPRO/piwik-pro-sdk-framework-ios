@@ -560,7 +560,21 @@ typedef NS_ENUM(NSUInteger, SessionHash)
 
  @param name A human readable display name of the content.
  @param piece A more technical name/id of the content, e.g. the image name or ads id. Optional.
- @param target The outgoing target, e.g. an URL. Optional.
+ @param target The outgoing target.
+ @param url actual content url. For instance the path to an image, video, audio, any text.
+ @return YES if the event was queued for dispatching.
+ @see sendContentInteractionWithName:piece:target:
+ */
+- (BOOL)sendContentImpressionWithName:(NSString *)name piece:(nullable NSString *)piece target:(nullable NSString *)target url:(nullable NSString *)url NS_SWIFT_NAME(sendContentImpression(name:piece:target:url:));
+
+/**
+ Track how often a specific ad or banner is displayed in the app.
+
+ Check out the content tracking user guide at Piwik (http://piwik.org/docs/content-tracking/) for additional details.
+
+ @param name A human readable display name of the content.
+ @param piece A more technical name/id of the content, e.g. the image name or ads id. Optional.
+ @param target The outgoing target.
  @return YES if the event was queued for dispatching.
  @see sendContentInteractionWithName:piece:target:
  */
