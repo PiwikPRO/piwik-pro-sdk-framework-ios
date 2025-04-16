@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.1.1 - 16.04.2025
+
+### Added
+
+- Additional `url` parameter to `sendContentImpression` method.
+
 ## 2.1.0 - 21.02.2025
 
 ### Added
