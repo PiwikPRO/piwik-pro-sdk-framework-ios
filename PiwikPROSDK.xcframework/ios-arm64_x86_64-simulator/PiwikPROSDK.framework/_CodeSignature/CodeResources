@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		QG4NHNuE79P29opozKNH8zGMvIo=
+		SFU7anDWYhlnknEah1B+CcsHewQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -53,10 +53,6 @@
 	<dict>
 		<key>Headers/EcommerceProducts.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			SrT8xeDFbOvlaiqqbHv5w4+bNr4=
-			</data>
 			<key>hash2</key>
 			<data>
 			bbcXCzD0Ct6daOrvb2bNAPiAdePPF0LveENDqKwBgRs=
@@ -64,10 +60,6 @@
 		</dict>
 		<key>Headers/PiwikDispatcher.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			6CphIrByKicpa/wGr5phohHHbwo=
-			</data>
 			<key>hash2</key>
 			<data>
 			L2UICQidUKJpIlOsd8VQhq2OQu7mLuLfPb/edfQFLRs=
@@ -75,10 +67,6 @@
 		</dict>
 		<key>Headers/PiwikPROSDK.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			PSx4KAjjtFrDkJ2X08gKz9XQ8Q8=
-			</data>
 			<key>hash2</key>
 			<data>
 			cdCGwzP6tJ4YT7+wSe/DUFEIx+yBiB3aHkA2fnFADNE=
@@ -86,10 +74,6 @@
 		</dict>
 		<key>Headers/PiwikTrackedViewController.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			/veiNulYpZWTAwHdxnHgdqyDZyc=
-			</data>
 			<key>hash2</key>
 			<data>
 			wA4g1fY1asSxPa5gLAxFDNs6xkNJ97O5OJwwymBXMqk=
@@ -97,10 +81,6 @@
 		</dict>
 		<key>Headers/PiwikTracker.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			YLn8d/L7CumGYKiBg49UtDdu8hQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			7TWHqObQZaz+M8VejF2RlrHAO+zTUNRmvpeNHslhrKg=
@@ -108,10 +88,6 @@
 		</dict>
 		<key>Headers/PiwikTransaction.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			CYbNfjgck3NxxZcG4/ouhjvYr+Y=
-			</data>
 			<key>hash2</key>
 			<data>
 			8Ks5DRx6nruhNbU8AOeIzKhJs714rbv9B1tgpVEzRuw=
@@ -119,10 +95,6 @@
 		</dict>
 		<key>Headers/PiwikTransactionBuilder.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			cu562U3mbL8dGMzZusPcV7/hVh4=
-			</data>
 			<key>hash2</key>
 			<data>
 			261td8klYeRp/dI4TkE/8YzfCI59mMp93hlyz6KY3hc=
@@ -130,10 +102,6 @@
 		</dict>
 		<key>Headers/PiwikTransactionItem.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			sYCqi0UCuyKZpIp2DF1tdtQCeoE=
-			</data>
 			<key>hash2</key>
 			<data>
 			Uw0QXFVeH4qphHjykROK1ZEUlk6ZnkK9MiihwC/LaCc=
@@ -141,10 +109,6 @@
 		</dict>
 		<key>Headers/Product.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			1yYZTGc9mmWa5gx4cDBgzramZxE=
-			</data>
 			<key>hash2</key>
 			<data>
 			szkdjpNqx+zI9pUdy79UdeBGnHN27Zgum9MXquKgKg0=
@@ -152,10 +116,6 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			lU/JW1hg7fmp9s8soaN917OTVus=
-			</data>
 			<key>hash2</key>
 			<data>
 			mUW0OFqpmU4L+ze43sq/Sv+oqB6KhgaG1d8mfwj4zic=
