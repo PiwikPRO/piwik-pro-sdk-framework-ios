@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.2.0 - 04.03.2026
+
+### Fixed
+- Updated the way the `_idvc` parameter is calculated for new visitors — the number of visits now starts from 1.
+
+
 ## 2.1.1 - 16.04.2025
 
 ### Added
