@@ -51,12 +51,14 @@ Pod::Spec.new do |s|
 
   s.requires_arc = false
 
-  s.pod_target_xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/**" }
+  s.pod_target_xcconfig = {
+    "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/**",
+    "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/",
+    "USER_HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/**"
+  }
 
-  s.xcconfig     =  {
-  "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/", 
-  "USER_HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/**", 
-  "OTHER_LDFLAGS" => "$(inherited) -ObjC"
+  s.xcconfig = {
+    "OTHER_LDFLAGS" => "$(inherited) -ObjC"
   }
 
 
