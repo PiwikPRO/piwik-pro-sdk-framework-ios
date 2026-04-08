@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.2.1 - 08.04.2026
+
+### Fixed
+- Scoped `FRAMEWORK_SEARCH_PATHS` and `USER_HEADER_SEARCH_PATHS` to `pod_target_xcconfig` in the podspec to prevent them from leaking into the consuming app target. This fixes iOS build failures with precompiled React Native (Expo SDK 54+ / RN 0.81+) where the broad search paths caused Clang to fail resolving the `React_Core` umbrella header. ([#23](https://github.com/PiwikPRO/piwik-pro-sdk-framework-ios/pull/23))
+- Fixed incorrect documentation for `appName` property — the header comment incorrectly stated it was sent as custom variable at index 2. In fact, custom variable index 2 is OS version. The `appName` property is used as the domain component in tracking URLs and as the event name for application install/update tracking.
+- Added `platforms` parameter to `Package.swift` to set the minimum deployment target to iOS 9, consistent with the podspec.
+
 ## 2.2.0 - 04.03.2026
 
 ### Fixed

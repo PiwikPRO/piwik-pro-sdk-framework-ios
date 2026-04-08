@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>ios-arm64/PiwikPROSDK.framework/.DS_Store</key>
-		<data>
-		+/pSlzmIV0TU1eDLCOaZ05Jnb1E=
-		</data>
 		<key>ios-arm64/PiwikPROSDK.framework/Headers/EcommerceProducts.h</key>
 		<data>
 		SrT8xeDFbOvlaiqqbHv5w4+bNr4=
@@ -26,7 +22,7 @@
 		</data>
 		<key>ios-arm64/PiwikPROSDK.framework/Headers/PiwikTracker.h</key>
 		<data>
-		YLn8d/L7CumGYKiBg49UtDdu8hQ=
+		jcnpJIrEY0cLMRuBCFqztuNOjho=
 		</data>
 		<key>ios-arm64/PiwikPROSDK.framework/Headers/PiwikTransaction.h</key>
 		<data>
@@ -46,7 +42,7 @@
 		</data>
 		<key>ios-arm64/PiwikPROSDK.framework/Info.plist</key>
 		<data>
-		sPoDlVTFq6ckLFofw9vK0GC967c=
+		8cXNFo4Cj4wy18G/L3YSbnDQgQQ=
 		</data>
 		<key>ios-arm64/PiwikPROSDK.framework/Modules/module.modulemap</key>
 		<data>
@@ -54,7 +50,7 @@
 		</data>
 		<key>ios-arm64/PiwikPROSDK.framework/PiwikPROSDK</key>
 		<data>
-		luaPy9RivE6x9cvsElcHoCZe3Xc=
+		U9Dld2Aph/A64h9/u5pw5n/g6HA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PiwikPROSDK.framework/Headers/EcommerceProducts.h</key>
 		<data>
@@ -74,7 +70,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/PiwikPROSDK.framework/Headers/PiwikTracker.h</key>
 		<data>
-		YLn8d/L7CumGYKiBg49UtDdu8hQ=
+		jcnpJIrEY0cLMRuBCFqztuNOjho=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PiwikPROSDK.framework/Headers/PiwikTransaction.h</key>
 		<data>
@@ -94,7 +90,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/PiwikPROSDK.framework/Info.plist</key>
 		<data>
-		SFU7anDWYhlnknEah1B+CcsHewQ=
+		DozORS/a310XvJzXHotpMy3OITA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PiwikPROSDK.framework/Modules/module.modulemap</key>
 		<data>
@@ -102,11 +98,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/PiwikPROSDK.framework/PiwikPROSDK</key>
 		<data>
-		CEkOqnzp3+HGXAyr7NVbD8BUR1c=
+		HjKlXsYvnUJZMDZ2hBCyIJV9AZs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PiwikPROSDK.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		QOiPWIJOehU3UQ/npFrq2UoCtp8=
+		LRJBZTzcO2J8fEIqtcgt7Y+lTek=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PiwikPROSDK.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -114,7 +110,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/PiwikPROSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		HTjrjvNmqeB3r9ioYG94f+8sTKU=
+		jHYFW4uabP37VfW8D6fJxQbHO6I=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PiwikPROSDK.framework/_CodeSignature/CodeSignature</key>
 		<data>
@@ -155,7 +151,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7TWHqObQZaz+M8VejF2RlrHAO+zTUNRmvpeNHslhrKg=
+			82RJwbarqtQf5SWq3GfPgHV4BAWQok4HLcVq8RXcwXA=
 			</data>
 		</dict>
 		<key>ios-arm64/PiwikPROSDK.framework/Headers/PiwikTransaction.h</key>
@@ -190,7 +186,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cbr1UppUSNJcxpoIbfk5rtzUTlChZPQj/wabdri8oxA=
+			cFVfK1H9f/Jd3cDhRoyPVB2K2zjtWIH0OEBwGoz+KOs=
 			</data>
 		</dict>
 		<key>ios-arm64/PiwikPROSDK.framework/Modules/module.modulemap</key>
@@ -204,7 +200,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4A7Hh9nIzocQAXHL1rQE/n6i1aRZ8uAjSGHfcDFAFkE=
+			2WFo6q+4hkhwi5bICqpYMWLiYcSj8ZgOoYaLT1etros=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PiwikPROSDK.framework/Headers/EcommerceProducts.h</key>
@@ -239,7 +235,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7TWHqObQZaz+M8VejF2RlrHAO+zTUNRmvpeNHslhrKg=
+			82RJwbarqtQf5SWq3GfPgHV4BAWQok4HLcVq8RXcwXA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PiwikPROSDK.framework/Headers/PiwikTransaction.h</key>
@@ -274,7 +270,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			L+bnhbWukKSYWvaGQz29HNwos523m54gNlu7irCXIko=
+			NZhXFyhntWokZ3tZdFHWPMsW6Zy2d8FRNX617FLC0A8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PiwikPROSDK.framework/Modules/module.modulemap</key>
@@ -288,14 +284,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ot1jxj8GBJBwpopMekFCYMT4QEzlHtNJI1tgPz9XAQ8=
+			51lvTd6sNsGJmDg58jZiY0x/FtgyRubG+Avq7I9iPNc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PiwikPROSDK.framework/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lEgnaxPN0YX5Hf9hnHsSd5LKZUpida/fVjZ71j/2g6k=
+			aiUmx9WpimqRS5FRCtrIlWrk3izl1038ckn9P7FwBoc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PiwikPROSDK.framework/_CodeSignature/CodeRequirements</key>
@@ -309,7 +305,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			M4nu2Bgld6Z0KS2g0lSxNDXay+Ib9tTs8+PVtSEh8Bg=
+			pcjrLXNARg+IbXzR5xWzyY40BostRlxAveoGRXUT5C8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PiwikPROSDK.framework/_CodeSignature/CodeSignature</key>
