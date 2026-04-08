@@ -225,9 +225,11 @@ typedef NS_ENUM(NSUInteger, SessionHash)
 @property (nonatomic, assign) BOOL includeDefaultCustomVariable;
 
 /**
- The application name for custom visit variable.
+ The application name. Used as:
+ - The domain component in tracking URLs (e.g. http://AppName/screen/settings).
+ - The event name for application install and update tracking.
 
- The application name will be sent as a custom variable (index 2). By default the application name stored in CFBundleDisplayName will be used.
+ By default the value stored in CFBundleDisplayName (or CFBundleName as fallback) will be used.
  */
 @property (nullable, nonatomic, strong) NSString *appName;
 
