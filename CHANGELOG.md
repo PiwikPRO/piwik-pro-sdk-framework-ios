@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.2.2 - 24.06.2026
+
+### Fixed
+- Internal maintenance and code cleanup.
+
 ## 2.2.1 - 08.04.2026
 
 ### Fixed
