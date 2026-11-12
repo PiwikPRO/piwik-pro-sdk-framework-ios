@@ -100,16 +100,6 @@ typedef NS_ENUM(NSUInteger, SessionHash)
 //MARK: - Tracker configuration
 
 /**
- The user email address used for identifying the user in the app e.g. after the user signed in.
- If provided this is used by the server for user segmentation.
-
- It is important that the user email is saved locally in the app and set each time directly after the tracker is started. Otherwise tracked events sent before setting this property will not be attributed to the user email.
-
- The user email allow events from different platforms, e.g. iOS and Android, to be associated in the Piwik server to the same user as long as the same user email is used on all platforms.
- */
-@property (nullable, nonatomic, strong) NSString *userEmail;
-
-/**
  The user id is an additional non empty unique string identifying the user. If email address of the user is know you can set this property to user's email address, if not any additional string such as a unique username
  can be set here also.
 
@@ -135,18 +125,6 @@ typedef NS_ENUM(NSUInteger, SessionHash)
 @property (nonnull, nonatomic, readonly) NSString *userAgent;
 
 /**
- The device ID is used to track the IDFA (identifier for advertising). IDFA is an additional non empty unique string identifying the device. If you want to use IDFA for tracking then you should set this property to IDFA by yourself (by default it is nil). You can read IDFA from the device as below:
- 
- #import <AdSupport/ASIdentifierManager.h>
- 
- NSString *idfa = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
- [PiwikTracker sharedInstance].deviceID = idfa;
- 
- Note that there are restrisctions in using IDFA in the App Store applications and apps that do not display ads might not pass the App Store review process.
- */
-@property (nullable, nonatomic, strong) NSString *deviceID;
-
-/**
  Views, exceptions and social tracking will be prefixed based on type.
 
  This will allow for logical separation and grouping of statistics in the Piwik web interface.
@@ -161,7 +139,7 @@ typedef NS_ENUM(NSUInteger, SessionHash)
 /**
  Anonymization is a feature that allows tracking user's activity for aggregated data analysis even if the user doesn't consent on tracking the data. Key features of anonymization:
  - The user can't be identified as the same person across multiple sessions if he didn't consent on tracking,
- - Personal data cannot be tracked during the session (i.e. user ID, device ID, email)
+ - Personal data cannot be tracked during the session (i.e. user ID)
  
  Default value is YES.
  */
@@ -597,29 +575,40 @@ typedef NS_ENUM(NSUInteger, SessionHash)
 - (BOOL)sendContentInteractionWithName:(NSString *)name interaction:(NSString*)interaction piece:(nullable NSString *)piece target:(nullable NSString *)target NS_SWIFT_NAME(sendContentInteraction(name:interaction:piece:target:));
 
 /**
- Track custom attributes configured in Piwik PRO data manager.
- Beside attributes at least one of userId or userMail is required.
+ Track Data Activation profile attributes of the current user.
+ Predefined attributes use the "analytics." prefix, custom attributes must be defined in Data Activation first.
+ Values can be NSString (also for IP addresses), NSNumber (including booleans) or NSDate, which is sent in the ISO 8601 format in UTC.
 
- @param name A name of the attribute.
- @param value Value of the attribute
- @return YES if the attribute was queued for dispatching.
+ The profile is identified by the visitor ID and, if anonymization is disabled, also by the user ID. When anonymization is enabled the user ID is not sent and a new visitor ID is generated on every app start, so the attributes are assigned to a profile that is used only until the app is restarted.
+
+ @param attributes Attribute name-value pairs sent in one request.
+ @return YES if the attributes were queued for dispatching.
  */
-- (BOOL)sendProfileAttributeWithName:(NSString *)name value:(NSString *)value NS_SWIFT_NAME(sendAudienceManagerAttribute(name:value:));
+- (BOOL)sendProfileAttributes:(NSDictionary<NSString *, id> *)attributes NS_SWIFT_NAME(sendProfileAttributes(_:));
 
 /**
- Check audience membership for current user with given audience ID.
+ Get IDs of the Data Activation audiences the current user belongs to.
+ The user is identified by the visitor ID, so anonymization should be disabled.
+
+ @param completionBlock Block called after getting the audiences. If the request succeeded then audienceIDs will return the audience identifiers.
+ */
+- (void)getAudiencesWithCompletionBlock:(void (^)(NSArray<NSString *> * _Nullable audienceIDs, NSError * _Nullable error))completionBlock NS_SWIFT_NAME(getAudiences(completion:));
+
+/**
+ Check Data Activation audience membership for current user with given audience ID.
 
  @param audienceID Audience identifier.
- @param completionBlock Block called after checking the membership. If checking membership succeeded and user is a member of given audience then isMember will return YES.
+ @param completionBlock Block called after checking the membership. If the user is a member of given audience then isMember will return YES.
  */
-- (void)checkMembershipWithAudienceID:(NSString *)audienceID completionBlock:(void (^)(BOOL isMember, NSError * _Nullable error))completionBlock;
+- (void)isUserInAudienceWithID:(NSString *)audienceID completionBlock:(void (^)(BOOL isMember, NSError * _Nullable error))completionBlock NS_SWIFT_NAME(isUserInAudience(audienceID:completion:));
 
 /**
- Data manager get profile attributes for current user.
- 
- @param completionBlock Block called after getting profile attributes. If request was succeeded then profileAttributes will return set of attributes name-value pairs.
+ Get Data Activation profile attributes enabled for public access for current user.
+ Values are NSString, NSNumber (including booleans) or NSArray.
+
+ @param completionBlock Block called after getting profile attributes. If the request succeeded then profileAttributes will return attribute name-value pairs.
  */
-- (void)audienceManagerGetProfileAttributes: (void (^)(NSDictionary *profileAttributes, NSError * _Nullable error))completionBlock;
+- (void)getProfileAttributesWithCompletionBlock:(void (^)(NSDictionary<NSString *, id> * _Nullable profileAttributes, NSError * _Nullable error))completionBlock NS_SWIFT_NAME(getProfileAttributes(completion:));
 
 /**
  Assign a custom dimension.
@@ -669,7 +658,7 @@ Every unique visitor must be assigned a different ID and this ID must not change
  
 If this value is not set Piwik will still track visits, but the unique visitors metric might be less accurate.
 
- @param newVisitorID New Visitor id used for data manager event
+ @param newVisitorID New Visitor ID.
  @return YES if the new Visitor ID is created in a valid format and set as a new Visitor ID, or NO if the Visitor ID format is invalid.
  */
 - (BOOL)setVisitorID:(NSString *) newVisitorID NS_SWIFT_NAME(setVisitorID(newVisitorID:));

@@ -1,6 +1,21 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.0.0 - 12.11.2026
+
+### Added
+- Data Activation support:
+  - `getAudiencesWithCompletionBlock:` – reads IDs of the audiences the user belongs to.
+  - `isUserInAudienceWithID:completionBlock:` – checks audience membership.
+  - `getProfileAttributesWithCompletionBlock:` – reads profile attributes enabled for public access.
+  - `sendProfileAttributes:` – creates or updates profile attributes. Values can be `NSString`, `NSNumber` or `NSDate`.
+- Optional `PiwikDispatcher` methods for Data Activation, used by custom dispatchers.
+
+### Removed
+- Audience Manager, which is no longer available in the product: `checkMembershipWithAudienceID:completionBlock:` (use `isUserInAudienceWithID:completionBlock:`), `audienceManagerGetProfileAttributes:` (use `getProfileAttributesWithCompletionBlock:`), `sendProfileAttributeWithName:value:` (use `sendProfileAttributes:`) and the related `PiwikDispatcher` methods. Cached Audience Manager events are not sent.
+- `userEmail` property, use `userID` to identify the user.
+- `deviceID` property.
+
 ## 2.2.2 - 24.06.2026
 
 ### Fixed

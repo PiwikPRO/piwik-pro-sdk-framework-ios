@@ -37,41 +37,40 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)sendBulkEventWithParameters:(NSMutableArray *)parameters success:(void (^)(void))successBlock failure:(void (^)(BOOL shouldContinue))failureBlock;
 
-/**
- Send a a bulk of data manager events to the Piwik server.
-
- The dispatcher must send a POST request to the Piwik data manager endpoint, adding the events as a JSON encoded body to the request.
-
- @param events Data manager events. These parameters should be JSON encoded and added to the request body.
- @param successBlock Run the block if the dispatch to the Piwik server is successful.
- @param failureBlock Run this block if the dispatch to the Piwik server fails. Provide a YES to indicate if the SDK should attempt to send any pending event or NO if pending events should be saved until next dispatch. E.g. there is no use trying to send pending events if there is no network connection.
- */
-- (void)sendAudienceManagerEvents:(NSArray *)events success:(void (^)(void))successBlock failure:(void (^)(BOOL shouldContinue))failureBlock;
-
-/**
- Send a request to check audience membership to the Piwik server.
-
- @param visitorID Visitor ID.
- @param websiteID Website ID.
- @param audienceID Audience ID.
- @param successBlock Run the block if the request to the Piwik server is successful.
- @param failureBlock Run this block if the request to the Piwik server fails.
- */
-- (void)checkAudienceMembershipWithVisitorID:(NSString *)visitorID websiteID:(NSString *)websiteID audienceID:(NSString *)audienceID success:(void (^)(BOOL isMember))successBlock failure:(void (^)(NSError *error))failureBlock;
-
-
-/**
- Send a request to get user profile attributes from the Piwik server.
- 
- @param visitorID Visitor ID.
- @param websiteID Website ID.
- @param successBlock Run the block if the request to the Piwik server is successful.
- @param failureBlock Run this block if the request to the Piwik server fails.
- */
-- (void)audienceManagerGetUserProfileAttributes:(NSString *)visitorID websiteID:(NSString *)websiteID success:(void (^)(NSDictionary *profileAttributes))successBlock failure:(void (^)(NSError *error))failureBlock;
-
 
 @optional
+
+/**
+ Send a request to get Data Activation audience IDs from the Piwik server.
+
+ @param visitorID Visitor ID.
+ @param siteID Site ID.
+ @param successBlock Run the block if the request to the Piwik server is successful.
+ @param failureBlock Run this block if the request to the Piwik server fails.
+ */
+- (void)getDataActivationAudiencesWithVisitorID:(NSString *)visitorID siteID:(NSString *)siteID success:(void (^)(NSArray<NSString *> *audienceIDs))successBlock failure:(void (^)(NSError *error))failureBlock;
+
+/**
+ Send a request to get Data Activation profile attributes from the Piwik server.
+
+ @param visitorID Visitor ID.
+ @param siteID Site ID.
+ @param successBlock Run the block if the request to the Piwik server is successful.
+ @param failureBlock Run this block if the request to the Piwik server fails.
+ */
+- (void)getDataActivationProfileAttributesWithVisitorID:(NSString *)visitorID siteID:(NSString *)siteID success:(void (^)(NSDictionary<NSString *, id> *profileAttributes))successBlock failure:(void (^)(NSError *error))failureBlock;
+
+/**
+ Send a Data Activation profile update to the Piwik server.
+
+ The dispatcher must send a POST request to the Data Activation update profile endpoint, adding the parameters as a JSON encoded body to the request. Requests rejected by Data Activation (HTTP 400, 402, 404 and 422) must be reported as successful, so that they are not retried.
+
+ @param parameters Profile identifiers and attributes. These parameters should be JSON encoded and added to the request body.
+ @param siteID Site ID.
+ @param successBlock Run the block if the dispatch to the Piwik server is successful.
+ @param failureBlock Run this block if the dispatch to the Piwik server fails. Provide a YES to indicate if the SDK should attempt to send any pending event or NO if pending events should be saved until next dispatch.
+ */
+- (void)sendDataActivationEventWithParameters:(NSDictionary *)parameters siteID:(NSString *)siteID success:(void (^)(void))successBlock failure:(void (^)(BOOL shouldContinue))failureBlock;
 
 /**
  *  Set a custom user agent the dispatchers will use for requests.
